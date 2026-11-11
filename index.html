@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Francisco Roberto Alonso Lorente</title>
+    <meta name="description" content="" />
+    <meta name="theme-color" content="#0E3B2B" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Portada: nombre + sistema en vivo -->
+    <header class="hero" id="inicio">
+      <div class="container">
+        <nav class="top-nav" data-i18n-aria="nav_label">
+          <ul class="nav-links">
+            <li><a href="#sobre-mi" data-i18n="nav_about"></a></li>
+            <li><a href="#stack" data-i18n="nav_stack"></a></li>
+            <li><a href="#ia" data-i18n="nav_ia"></a></li>
+            <li><a href="#experiencia" data-i18n="nav_exp"></a></li>
+            <li class="nav-keep"><a href="#contacto" data-i18n="nav_contact"></a></li>
+          </ul>
+          <button class="lang-toggle" type="button" id="lang-toggle"></button>
+        </nav>
+
+        <div class="hero-copy">
+          <h1 id="hero-name"></h1>
+          <p class="hero-role" id="hero-role"></p>
+          <p class="hero-tagline" id="hero-tagline"></p>
+        </div>
+
+        <figure class="system">
+          <canvas id="flow-canvas" role="img" data-i18n-aria="arch_aria"></canvas>
+          <figcaption class="system-caption">
+            <ul class="legend">
+              <li>
+                <span class="swatch swatch-cache" aria-hidden="true"></span>
+                <span data-i18n="legend_cache"></span>
+                <strong class="count" id="count-cache">0</strong>
+              </li>
+              <li>
+                <span class="swatch swatch-request" aria-hidden="true"></span>
+                <span data-i18n="legend_request"></span>
+                <strong class="count" id="count-request">0</strong>
+              </li>
+              <li>
+                <span class="swatch swatch-event" aria-hidden="true"></span>
+                <span data-i18n="legend_event"></span>
+                <strong class="count" id="count-event">0</strong>
+              </li>
+            </ul>
+            <p class="system-note">
+              <strong data-i18n="arch_title"></strong>
+              <span data-i18n="arch_lead"></span>
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="row" id="sobre-mi">
+        <h2><span class="section-emoji" aria-hidden="true">👋</span> <span data-i18n="about_title"></span></h2>
+        <div class="row-body">
+          <div class="prose" id="about-text"></div>
+          <dl class="pairs" id="about-facts"></dl>
+        </div>
+      </section>
+
+      <section class="row" id="stack">
+        <h2><span class="section-emoji" aria-hidden="true">🛠️</span> <span data-i18n="stack_title"></span></h2>
+        <div class="row-body">
+          <dl class="pairs" id="stack-list"></dl>
+        </div>
+      </section>
+
+      <section class="row" id="ia">
+        <h2><span class="section-emoji" aria-hidden="true">🤖</span> <span data-i18n="ia_title"></span></h2>
+        <div class="row-body">
+          <p class="prose" data-i18n="ia_lead"></p>
+          <ul class="names">
+            <li>Claude Code</li>
+            <li>Skills</li>
+            <li>MCP</li>
+            <li data-i18n="ia_commands"></li>
+            <li data-i18n="ia_subagents"></li>
+            <li>Hooks</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="row" id="experiencia">
+        <h2><span class="section-emoji" aria-hidden="true">💼</span> <span data-i18n="exp_title"></span></h2>
+        <ol class="row-body jobs" id="experience-list"></ol>
+      </section>
+
+      <section class="row" id="contacto">
+        <h2><span class="section-emoji" aria-hidden="true">✉️</span> <span data-i18n="contact_title"></span></h2>
+        <div class="row-body">
+          <p class="prose" data-i18n="contact_lead"></p>
+          <a class="email-link" id="contact-email" href="#"></a>
+          <div class="contact-actions">
+            <button class="btn-outline" type="button" id="copy-email" data-i18n="copy_email"></button>
+            <span class="copy-feedback" id="copy-feedback" role="status"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> <span id="footer-name"></span></p>
+        <p data-i18n="footer_note"></p>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

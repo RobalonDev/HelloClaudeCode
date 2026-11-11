@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Ajustes locales de Claude Code (personales, no se comparten)
+.claude/settings.local.json
+
+# Capturas y registros generados por el MCP de Playwright
+.playwright-mcp/
